@@ -6,6 +6,7 @@ pipeline {
             steps {
                 echo 'Cloning the code from GitHub'
 				sh'''
+				rm -rf pythonexp
 				git clone https://github.com/sairammagham/pythonexp.git
 				'''
             }
@@ -16,7 +17,6 @@ pipeline {
                 echo 'Building the Docker Image'
 				sh'''
 				
-				ls -lrt
 				cd pythonexp
 				sudo docker build -t rams3/hello:2.0 .
 				sudo docker images
