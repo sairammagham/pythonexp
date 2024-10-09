@@ -29,8 +29,6 @@ pipeline {
             steps {
                 echo 'docker run '
                 sh '''
-                sudo docker container stop pythonapp
-                sudo docker rm pythonapp
                 sudo docker push rams3/hello:2.0
                 sudo docker run -d -p 8089:3333 --name pythonapp rams3/hello:2.0
                 sudo docker ps
