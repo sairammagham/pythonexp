@@ -30,7 +30,7 @@ pipeline {
                 echo 'docker run '
                 sh '''
                 sudo docker push rams3/hello:2.0
-                sudo docker run -d -p 8089:3333 --name pythonapp rams3/hello:2.0
+                sudo docker run -d -p 8087:3333 --name pythonappli rams3/hello:2.0
                 sudo docker ps
                 '''
             }
